@@ -1,0 +1,112 @@
+{% extends 'shared/__layout.html' %}
+{% load static %}
+{% block content %}
+    <div class="category-section">
+        <h1 class="category-header">
+            دسته بندی تصاویر
+        </h1>
+        <div class="category-container">
+            {% for category in categories %}
+                <div class="category-item">
+                    <img src="{{ category.image.url }}"
+                         class="category-image">
+                    <span class="category-title">
+                    {{ category.title }}
+                </span>
+                    <div class="category-overly"></div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    <div class="gallery-container">
+        <h1 class="category-header">
+            گالری تصاویر
+        </h1>
+        <div class="gallery-section">
+            {% for gallery_image in gallery_images %}
+                <div class="gallery-item">
+                    <img src="{{ gallery_image.image.url }}"
+                         alt="">
+                    <span>{{ gallery_image.title }}</span>
+                    <div class="gallery-overly">
+                        <span>باز کردن</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-section">
+            <div class="footer-info-container">
+                <div class="why-us">
+                    <div class="footer-info-header">چرا ما ؟</div>
+                    <p class="footer-info-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti dicta
+                        dignissimos eligendi error fugit libero magni minima officia optio possimus, qui rem, sit soluta
+                        tempora
+                        temporibus tenetur, unde veniam?
+                    </p>
+                </div>
+                <div class="work-process">
+                    <div class="footer-info-header">روند کاری ما</div>
+                    <p class="footer-info-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti dicta
+                        dignissimos eligendi error fugit libero magni minima officia optio possimus, qui rem, sit soluta
+                        tempora
+                        temporibus tenetur, unde veniam?
+                    </p>
+                </div>
+                <div class="guaranty">
+                    <div class="footer-info-header">گارانتی</div>
+                    <p class="footer-info-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti dicta
+                        dignissimos eligendi error fugit libero magni minima officia optio possimus, qui rem, sit soluta
+                        tempora
+                        temporibus tenetur, unde veniam?
+                    </p>
+                </div>
+            </div>
+            <div class="footer-info-container-2">
+                <div class="footer-info-data-container">
+                    test
+                </div>
+                <div class="footer-info-information-container">
+                    <div class="info-numbers">
+                        <h1 class="footer-info-custom-title">
+                            تعداد کشور های خارجی :
+                        </h1>
+                        <div class="footer-info-numbers">
+                            <span class="main-footer-info-number">تعداد کشور های خارجی : <span>25 مورد</span></span>
+                            <span class="main-footer-info-number">تعداد کار : <span>10 عدد</span> </span>
+                        </div>
+                    </div>
+                    <div class="footer-logo">
+                        <h1 class="footer-info-custom-title">
+                            شرکت های همکار ما :
+                        </h1>
+                        <div class="footer-info-logo-container">
+                            {% for company in companies %}
+                                <img src="{{ company.image.url }}" alt="">
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                    <div class="footer-info-ok">
+
+                    </div>
+                    <div class="footer-flag">
+                        <h1 class="footer-info-custom-title">
+                            کشور های درحال همکاری :
+                        </h1>
+                        <div class="footer-info-country-container">
+                            {% for country in countries %}
+                                <img src="{{ country.image.url }}" alt="">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

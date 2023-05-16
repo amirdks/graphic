@@ -1,0 +1,345 @@
+@import url("./reset.css");
+
+@import url('../fonts/Vazirmatn-font-face.css');
+
+:root {
+    --primary: #04012c;
+    --secondary: #7f75f1;
+    --light: #fff;
+    --dark: #000;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    direction: rtl;
+    background-color: var(--primary);
+    font-family: Vazirmatn, Sans-serif, Serif, Monospace, serif;
+}
+
+#header {
+
+    padding: 20px 0;
+    border-bottom: 1px solid var(--secondary);
+}
+
+#header .brand {
+    text-align: center;
+    color: var(--light);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#header .brand-description {
+    margin-top: 15px;
+    text-align: center;
+    opacity: .8;
+    color: var(--light);
+}
+
+.navbar-container {
+    /*background-color: var(--primary);*/
+    border-bottom: 1px solid var(--secondary);
+}
+
+.navbar-section {
+    width: 85%;
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-section .navbar-ul {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar-ul li {
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 0 20px;
+    border: 2px solid var(--secondary);
+    transition: all .3s;
+}
+
+.navbar-ul li:hover {
+    background-color: var(--secondary);
+}
+
+
+.navbar-ul li a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navbar-ul li a:hover {
+    text-decoration: none;
+    color: var(--light);
+}
+
+
+.navbar-order-container {
+    width: 50%;
+    text-align: left;
+    direction: ltr;
+}
+
+.navbar-order-container .navbar-order {
+    border: 2px solid var(--secondary);
+    padding: 10px 50px;
+    text-align: center;
+    color: var(--light);
+    transition: all .3s;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: max-content;
+}
+
+.navbar-order-container .navbar-order i {
+    font-size: 1.5rem;
+    margin: 0 5px;
+}
+
+.navbar-order-container .navbar-order:hover {
+    background-color: var(--secondary);
+}
+
+/* category section */
+.category-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 25px 0;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.category-item {
+    width: calc(10% - 10px);
+    border-radius: 10px;
+    position: relative;
+    margin: 5px;
+}
+
+.category-item img {
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+}
+
+.category-item span {
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    left: 25%;
+    z-index: +2;
+    font-size: 1.2rem;
+    right: 25%;
+    color: var(--light);
+}
+
+.category-item:hover {
+    cursor: pointer;
+}
+
+.category-item:hover .category-overly {
+    z-index: +1;
+}
+
+.category-overly {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(000, 000, 000, .3);
+    top: 0;
+    z-index: -1;
+}
+
+.category-header {
+    width: max-content;
+    margin: 20px auto;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5rem;
+    border: 2px solid var(--secondary);
+    color: var(--light);
+    border-radius: 20px;
+}
+
+/* gallery styles */
+.gallery-container {
+    padding: 25px 0;
+}
+
+.gallery-section {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.gallery-item {
+    margin: 10px;
+    width: calc(20% - 20px);
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    min-height: 150px;
+    max-height: 250px;
+}
+
+.gallery-item span {
+    text-align: center;
+    color: var(--light);
+    opacity: .8;
+    padding-top: 10px;
+    font-size: .9rem;
+    display: block;
+}
+
+.gallery-item:hover .gallery-overly {
+    z-index: +1;
+}
+
+.gallery-overly {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(000, 000, 000, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    top: 0;
+    z-index: -1;
+}
+
+.gallery-overly span {
+    color: var(--light);
+    font-size: 1.3rem;
+}
+
+/* footer styles */
+
+#footer {
+    border-top: 2px solid var(--secondary);
+    padding: 20px 0;
+}
+
+.footer-section {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.footer-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info-container > div {
+    width: 30%;
+    text-align: center;
+
+}
+
+.footer-info-header {
+    font-size: 1.5rem;
+    color: var(--light);
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+.footer-info-text {
+    color: var(--light);
+    opacity: .6;
+    font-size: .9rem;
+    line-height: 1.8rem;
+}
+
+.footer-info-container-2 {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-info-container-2 > div {
+    width: 50%;
+    color: white;
+    text-align: center;
+}
+
+.footer-info-information-container > div {
+    margin: 20px 0;
+}
+
+.footer-info-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-footer-info-number {
+    width: 50%;
+    text-align: center;
+}
+
+.main-footer-info-number span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.footer-info-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-info-logo-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: calc(10% - 20px);
+    margin: 10px;
+}
+
+.footer-info-country-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-info-country-container img {
+    object-fit: cover;
+    width: calc(10% - 20px);
+    margin: 10px;
+}
+.footer-info-custom-title{
+    margin: 40px 0 20px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.3rem;
+    opacity: .8;
+}

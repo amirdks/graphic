@@ -1,0 +1,38 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3b50011dc6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block custom_style %}{% endblock %}
+</head>
+<body class="dark">
+<header id="header">
+    <h1 class="brand">CGLancer.com</h1>
+    <p class="brand-description">شعار انتخابی ما بهترین شعار است</p>
+</header>
+<nav class="navbar-container">
+    <div class="navbar-section">
+        <ul class="navbar-ul">
+            <li><a href="">تیم ما</a></li>
+            <li><a href="">به ما بپیوندید</a></li>
+            <li><a href="">روند کاری ما</a></li>
+            <li><a href="">رضایت نامه</a></li>
+        </ul>
+        <div class="navbar-order-container">
+            <a class="navbar-order">
+                <span>خرید کنید</span> <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+{% block content %}{% endblock %}
+<script src="{% static 'js/script.js' %}"></script>
+{% block custom_script %}{% endblock %}
+</body>
+</html>
